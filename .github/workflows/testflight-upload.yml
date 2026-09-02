@@ -1,6 +1,8 @@
 name: TestFlight Upload
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -135,7 +137,7 @@ jobs:
           </plist>
           PLIST
 
-      - name: Upload Build 1 to TestFlight
+      - name: Upload Build 5 to TestFlight
         run: |
           xcodebuild \
             -exportArchive \
