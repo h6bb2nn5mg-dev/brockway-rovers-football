@@ -6,13 +6,20 @@ options:
 settings:
   base:
     MARKETING_VERSION: 1.0
-    CURRENT_PROJECT_VERSION: 2
+    CURRENT_PROJECT_VERSION: 3
 targets:
   BrockwayRoversFootball:
     type: application
     platform: iOS
     sources:
-      - BrockwayRoversFootball
+      - path: BrockwayRoversFootball
+        excludes:
+          - team-hero.jpg
+          - rover-icon-source.png
+      - path: BrockwayRoversFootball/team-hero.jpg
+        buildPhase: resources
+      - path: BrockwayRoversFootball/rover-icon-source.png
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.brockwayrovers.football
